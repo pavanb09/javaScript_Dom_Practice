@@ -1,27 +1,37 @@
 let count = document.getElementById("number");
 
 function increase(){
-    count.textContent = parseInt(count.textContent)+1;
-    if(count.textContent > 0){
-    count.style.color = "green"}
-    else if(count.textContent == 0){
-        count.style.color = "black"
-    }
+    let value = parseInt(count.textContent);
+    value++;
+    count.textContent = value;
+    updateColors(value);
+    
     
 }
 function reset(){
+    let value = 0
     count.textContent = 0;
-    if(count.textContent == 0){
-        count.style.color = "black"
-    }
+    updateColors(value)
+    
 }
 function decrease(){
-    count.textContent = parseInt(count.textContent)-1;
-    if(count.textContent < 0){
-    count.style.color = "red"}
-     else if(count.textContent == 0){
-        count.style.color = "black"
-    }
+        
+    let value = parseInt(count.textContent);
+    value--;
+    count.textContent = value;
+    updateColors(value);
+    
     
 
+}
+
+function updateColors(colorsValue){
+
+    if(colorsValue < 0){
+        count.style.color = "red"
+    }else if(colorsValue > 0){
+        count.style.color = "Green";
+    }else{
+        count.style.color = "black"
+    }
 }
