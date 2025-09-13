@@ -1,10 +1,15 @@
 async function getData(){
     let response = await fetch("https://fakestoreapi.com/products")
+    try{
     if(!response.ok){
         throw new Error("data not found")
     }
     let data = await response.json();
     appendData(data);
+}catch(error){
+    console.log(error.msg);
+}
+
 }
 
 
