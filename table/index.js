@@ -1,5 +1,5 @@
 async function getData(){
-    let response = await fetch("http://localhost:3000/products")
+    let response = await fetch("https://fakestoreapi.com/products")
     if(!response.ok){
         throw new Error("data not found")
     }
