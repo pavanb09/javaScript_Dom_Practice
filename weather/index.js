@@ -34,7 +34,7 @@ try {
 function addData(result){
     let card = document.getElementById("card");
     card.innerHTML = 
-    `<p>City : ${result.name} </p>
+    `<h3>${result.name} </h3>
     <p>Temparature : ${result.main.temp}</p>
     <p>Pressure : ${result.main.pressure}</p>
     `;
